@@ -6,6 +6,9 @@ let goCalculadora = function (valorCalcular) {
     print.value += valorCalcular;
 }
 
+let goOperador = function (valorCalcular) {
+    print.value += valorCalcular;
+}
 
 let goRespuesta = function (respuesta) {
     if (respuesta === '=') {
@@ -17,7 +20,41 @@ let goRespuesta = function (respuesta) {
                 let n1 = parseInt(num1[0]);
                 let n2 = parseInt(num1[1]);
                 let resultado = n1+n2;
+                console.log(resultado);
                 print.value = resultado;
+            }
+            if(num[i]=='-'){
+                console.log(num[i])
+                let num1 = num.split('-');
+                let n1 = parseInt(num1[0]);
+                let n2 = parseInt(num1[1]);
+                let resultado = n1-n2;
+                console.log(resultado);
+                print.value = resultado;
+            }
+            if(num[i]=='*'){
+                console.log(num[i])
+                let num1 = num.split('*');
+                let n1 = parseInt(num1[0]);
+                let n2 = parseInt(num1[1]);
+                let resultado = n1*n2;
+                console.log(resultado);
+                print.value = resultado;
+            }
+            if(num[i]=='/'){
+                console.log(num[i])
+                let num1 = num.split('/');
+                let n1 = parseInt(num1[0]);
+                let n2 = parseInt(num1[1]);
+                if(n2===0){
+                    alert('no se puede dividir por cero');
+                    console.log('no cero')
+                }else{
+                    let resultado = n1/n2;
+                    console.log(resultado);
+                    print.value = resultado;
+                }
+                
             }
         }
     }

@@ -23,6 +23,12 @@ button:active {
   color: #e8ddcb !important;
 }
 
+.btn-primary-cal {
+  color: #ed0000;
+  background-color: #ffc107;
+  border-color: #bd2130;
+}
+
 .calcs {
   height: 100%;
   border: 10px solid #036564;

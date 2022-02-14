@@ -1,15 +1,13 @@
 let print = document.getElementById('print');
-const erase = false;
-let calc;
 
+
+//muestra la operacion en el input
 let goCalculadora = function (valorCalcular) {
     print.value += valorCalcular;
 }
 
-let goOperador = function (valorCalcular) {
-    print.value += valorCalcular;
-}
 
+//es llamado por el  operado '=' i valida y realiza la operacion 
 let goRespuesta = function (respuesta) {
     if (respuesta === '=') {
         let num = print.value;

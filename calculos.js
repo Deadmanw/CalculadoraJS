@@ -3,7 +3,7 @@ let print = document.getElementById('print');
 
 
 //muestra la operacion en el input
-let goCalculadora = function (valorCalcular) {
+ function goCalculadora(valorCalcular) {
     //console.log('que es esto ?'+print.value);
     print.value += valorCalcular;
     let operacion = print.value;
@@ -18,22 +18,20 @@ let goCalculadora = function (valorCalcular) {
         let tamCadena = operacion.length;
         //console.log(operacion[tamCadena-2]);
         if (operacion[tamCadena - 2] == '+' || operacion[tamCadena - 2] == '-' || operacion[tamCadena - 2] == '*' || operacion[tamCadena - 2] == '/') {
-
+            console.log(aux[tamCadena - 1]);
             operacion = operacion.slice(0, -2);
+            //operacion = ;
             console.log('nuevo' + operacion);
             valorCalcular = operacion;
+            console.log(valorCalcular);
         }
+        valorCalcular = operacion;
+        console.log('valor fuera fi 1'+valorCalcular);
     }
+    valorCalcular = operacion;
+    console.log('valor fuera fi 2'+valorCalcular);
 
-    /* if (valorCalcular=='+'|| valorCalcular=='-'||valorCalcular=='*'||valorCalcular=='/') {
-        let tamCadena=operacion.length;
-        console.log(operacion[tamCadena-2]);
-        if (operacion[tamCadena-2]=='+'|| operacion[tamCadena-2]=='-'||operacion[tamCadena-2]=='*'||operacion[tamCadena-2]=='/') {
-
-            operacion=operacion.slice(0,-3);
-            console.log('aaa'+operacion);   
-        }   
-    } */
+    return valorCalcular;
 }
 
 
@@ -41,15 +39,12 @@ let goCalculadora = function (valorCalcular) {
 let goRespuesta = function (respuesta) {
 
     let num = print.value;
-    console.log('el numero que llega es' + num);
-
-
-
-
+    console.log('el numero que llega es ' + goCalculadora());
+    num=goCalculadora();
+    console.log('numero'+num);
 
     if (respuesta === '=') {
-        let num = print.value;
-        console.log('el numero que llega es' + num);
+                
         for (let i = 0; i < num.length; i++) {
             if (num[i] == '+') {
                 console.log(num[i])

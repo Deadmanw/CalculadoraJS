@@ -7,6 +7,12 @@ let print = document.getElementById('print');
  function goCalculadora(valorCalcular) {
     //console.log('que es esto ?'+print.value);
     print.value += valorCalcular;
+    goValidar(valorCalcular);
+    return valorCalcular;
+    
+}
+
+function goValidar(valorCalcular) {
     let operacion = print.value;
     //operacion += valorCalcular;
     let aux = [];
@@ -47,10 +53,13 @@ let goRespuesta = function (respuesta) {
 
     let num = print.value;
     var numo=goCalculadora();
+    console.log('val'+goCalculadora());
+
     let num2=numo.split('u');
     let numF=num2[0];
     console.log('el numero que llega es ' + numF );
     num=numF;
+   // goValidar(num);
 
    
     if (respuesta === '=') {
